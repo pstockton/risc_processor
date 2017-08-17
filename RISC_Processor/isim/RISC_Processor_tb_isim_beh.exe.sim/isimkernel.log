@@ -1,0 +1,29 @@
+Command line:
+   RISC_Processor_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60554
+
+Thu Aug 17 16:23:12 2017
+
+
+ Elaboration Time: 0.0312 sec
+
+ Current Memory Usage: 666.513 Meg
+
+ Total Signals          : 102
+ Total Nets             : 176
+ Total Signal Drivers   : 33
+ Total Blocks           : 11
+ Total Primitive Blocks : 9
+ Total Processes        : 48
+ Total Traceable Variables  : 50
+ Total Scalar Nets and Variables : 4774
+Total Line Count : 225
+
+ Total Simulation Time: 0.0468 sec
+
+ Current Memory Usage: 666.513 Meg
+
+Thu Aug 17 16:23:39 2017
+
