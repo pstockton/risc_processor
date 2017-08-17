@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/RISC_Processor_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="RISC_Processor_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="27" />
+   <wvobject fp_name="/RISC_Processor_tb/instruction" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/alu_sel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_sel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_sel[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_wr_sel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_wr_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rf_wr_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/mem_addr_sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_addr_sel</obj_property>
+      <obj_property name="ObjectShortName">mem_addr_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_Rp_rd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_Rp_rd</obj_property>
+      <obj_property name="ObjectShortName">rf_Rp_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_Rq_rd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_Rq_rd</obj_property>
+      <obj_property name="ObjectShortName">rf_Rq_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_wr</obj_property>
+      <obj_property name="ObjectShortName">rf_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/mem_rd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_rd</obj_property>
+      <obj_property name="ObjectShortName">mem_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/mem_wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_wr</obj_property>
+      <obj_property name="ObjectShortName">mem_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_addr_Rp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_addr_Rp[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rf_addr_Rp[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_addr_Rq" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_addr_Rq[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rf_addr_Rq[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_addr_Wr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_addr_Wr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rf_addr_Wr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/D_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">D_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">D_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/IR_ld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IR_ld</obj_property>
+      <obj_property name="ObjectShortName">IR_ld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/PC_inc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">PC_inc</obj_property>
+      <obj_property name="ObjectShortName">PC_inc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/PC_clr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">PC_clr</obj_property>
+      <obj_property name="ObjectShortName">PC_clr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/immediate" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">immediate[7:0]</obj_property>
+      <obj_property name="ObjectShortName">immediate[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/PC_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PC_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/mem_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/alu_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/mem_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rf_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_out1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_out1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rf_out1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/rf_out2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rf_out2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rf_out2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RISC_Processor_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+</wave_config>

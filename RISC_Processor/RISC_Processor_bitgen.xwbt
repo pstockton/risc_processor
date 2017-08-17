@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.ncd
+OUTFILE=C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=C:\Users\Patrick\Desktop\Xilinx\RISC_Processor
+LICENSE=WebPack
+USER_INFO=210934322_0_0_678

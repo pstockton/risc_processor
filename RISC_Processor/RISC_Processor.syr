@@ -1,0 +1,1017 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: RISC_Processor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RISC_Processor.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RISC_Processor"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : RISC_Processor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" into library work
+Parsing module <RISC_Processor>.
+Parsing module <controller>.
+Parsing module <PC>.
+Parsing module <IR>.
+Parsing module <RF_MUX>.
+Parsing module <D_ADDR_MUX>.
+Parsing module <D_MEMORY>.
+Parsing module <RF>.
+Parsing module <alu_16bit>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <RISC_Processor>.
+
+Elaborating module <controller>.
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 114. $display Start of loop: instruction = 16'b................
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 115. $display Start of loop: Opcode = 4'b....
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 132. $display START: alu_sel = 3'b000
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 141. $display FETCH1
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 147. $display FETCH2
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 157. $display DECODE
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 213. $display ADD 0000: alu_sel = 3'b000
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 220. $display SUB 0001: alu_sel = 3'b001
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 227. $display AND 0010: alu_sel = 3'b010
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 234. $display OR 0011: alu_sel = 3'b011
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 241. $display XOR 0100: alu_sel = 3'b100
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 248. $display NOT 0101: alu_sel = 3'b101
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 254. $display SLA 0110: alu_sel = 3'b110
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 260. $display SRA 0111: alu_sel = 3'b111
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 266. $display LD 1001: alu_sel = 3'b...
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 272. $display SW 1010: alu_sel = 3'b...
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 427. $display MEM
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 441. $display WB
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 451. $display End of controller: alu_sel = 3'b...
+"C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v" Line 452. $display  
+
+Elaborating module <PC>.
+
+Elaborating module <IR>.
+
+Elaborating module <RF_MUX>.
+
+Elaborating module <D_ADDR_MUX>.
+
+Elaborating module <D_MEMORY>.
+
+Elaborating module <RF>.
+
+Elaborating module <alu_16bit>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <RISC_Processor>.
+    Related source file is "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <RISC_Processor> synthesized.
+
+Synthesizing Unit <controller>.
+    Related source file is "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v".
+        START = 0
+        FETCH1 = 1
+        FETCH2 = 2
+        DECODE = 3
+        MEM = 4
+        EXECUTE = 5
+        WB = 6
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 18                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <PC_inc>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rf_addr_Rp_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rf_addr_Rq_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rf_addr_Wr_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem_rd>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IR_ld>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem_wr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mem_addr_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rf_wr_sel<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rf_wr_sel<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_sel<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_sel<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_sel<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PC_clr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  14 Latch(s).
+	inferred  23 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <controller> synthesized.
+
+Synthesizing Unit <PC>.
+    Related source file is "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v".
+    Found 8-bit register for signal <PC_addr>.
+    Found 8-bit adder for signal <PC_addr[7]_GND_17_o_add_3_OUT> created at line 483.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+Unit <PC> synthesized.
+
+Synthesizing Unit <IR>.
+    Related source file is "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v".
+    Found 16-bit register for signal <instruction_reg>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <IR> synthesized.
+
+Synthesizing Unit <RF_MUX>.
+    Related source file is "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v".
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<15>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<14>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<13>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<12>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<11>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<10>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<9>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<8>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<7>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<6>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<5>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<4>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<3>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<2>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<1>> created at line 521.
+    Found 1-bit 3-to-1 multiplexer for signal <sel[1]_f[15]_wide_mux_0_OUT<0>> created at line 521.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  16 Latch(s).
+	inferred  16 Multiplexer(s).
+Unit <RF_MUX> synthesized.
+
+Synthesizing Unit <D_ADDR_MUX>.
+    Related source file is "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <D_ADDR_MUX> synthesized.
+
+Synthesizing Unit <D_MEMORY>.
+    Related source file is "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v".
+    Found 256x16-bit single-port RAM <Mram_memory> for signal <memory>.
+    Found 16-bit register for signal <R_data_out>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <D_MEMORY> synthesized.
+
+Synthesizing Unit <RF>.
+    Related source file is "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v".
+WARNING:Xst:647 - Input <reg_num_Rp<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reg_num_Rq<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reg_num_wr<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <rf_out_Rq>.
+    Found 16-bit register for signal <rf_out_Rp>.
+    Found 4x16-bit dual-port RAM <Mram_register> for signal <register>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <RF> synthesized.
+
+Synthesizing Unit <alu_16bit>.
+    Related source file is "C:\Users\Patrick\Desktop\Xilinx\RISC_Processor\RISC_Processor.v".
+    Found 16-bit subtractor for signal <rf_out_1[15]_rf_out_2[15]_sub_2_OUT> created at line 661.
+    Found 16-bit adder for signal <rf_out_1[15]_rf_out_2[15]_add_0_OUT> created at line 660.
+    Found 16-bit 8-to-1 multiplexer for signal <alu_res> created at line 659.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 Multiplexer(s).
+Unit <alu_16bit> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 256x16-bit single-port RAM                            : 1
+ 4x16-bit dual-port RAM                                : 2
+# Adders/Subtractors                                   : 2
+ 16-bit addsub                                         : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 5
+ 16-bit register                                       : 4
+ 8-bit register                                        : 1
+# Latches                                              : 30
+ 1-bit latch                                           : 30
+# Multiplexers                                         : 46
+ 1-bit 2-to-1 multiplexer                              : 23
+ 1-bit 3-to-1 multiplexer                              : 16
+ 16-bit 2-to-1 multiplexer                             : 6
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <PC_clr> (without init value) has a constant value of 0 in block <Unit0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rf_wr_sel_1> (without init value) has a constant value of 0 in block <Unit0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <f_15> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_14> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_13> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_12> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_11> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_10> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_9> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_8> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_7> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_6> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_5> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_4> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_3> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_2> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_1> is equivalent to a wire in block <Unit3>.
+WARNING:Xst:1294 - Latch <f_0> is equivalent to a wire in block <Unit3>.
+
+Synthesizing (advanced) Unit <D_MEMORY>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_memory> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <write>         | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <W_data_in>     |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <D_MEMORY> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PC>.
+The following registers are absorbed into counter <PC_addr>: 1 register on signal <PC_addr>.
+Unit <PC> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RF>.
+INFO:Xst:3231 - The small RAM <Mram_register> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 16-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <write>         | high     |
+    |     addrA          | connected to signal <reg_num_wr>    |          |
+    |     diA            | connected to signal <rf_in_value>   |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4-word x 16-bit                     |          |
+    |     addrB          | connected to signal <reg_num_Rp>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_register1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 16-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <write>         | high     |
+    |     addrA          | connected to signal <reg_num_wr>    |          |
+    |     diA            | connected to signal <rf_in_value>   |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4-word x 16-bit                     |          |
+    |     addrB          | connected to signal <reg_num_Rq>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RF> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 256x16-bit single-port distributed RAM                : 1
+ 4x16-bit dual-port distributed RAM                    : 2
+# Adders/Subtractors                                   : 1
+ 16-bit addsub                                         : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Multiplexers                                         : 46
+ 1-bit 2-to-1 multiplexer                              : 23
+ 1-bit 3-to-1 multiplexer                              : 16
+ 16-bit 2-to-1 multiplexer                             : 6
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <PC_clr> (without init value) has a constant value of 0 in block <controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rf_wr_sel_1> (without init value) has a constant value of 0 in block <controller>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Unit0/FSM_0> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 110   | 110
+-------------------
+
+Optimizing unit <IR> ...
+
+Optimizing unit <D_MEMORY> ...
+
+Optimizing unit <RF> ...
+
+Optimizing unit <RISC_Processor> ...
+
+Optimizing unit <controller> ...
+
+Optimizing unit <alu_16bit> ...
+
+Optimizing unit <RF_MUX> ...
+WARNING:Xst:1294 - Latch <Unit3/f_0> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_1> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_2> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_3> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_4> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_5> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_6> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_7> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_8> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_9> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_10> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_11> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_12> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_13> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_14> is equivalent to a wire in block <RISC_Processor>.
+WARNING:Xst:1294 - Latch <Unit3/f_15> is equivalent to a wire in block <RISC_Processor>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block RISC_Processor, actual ratio is 1.
+Latch Unit0/alu_sel_2 has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/alu_sel_1 has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/alu_sel_0 has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/rf_wr_sel_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Unit5/R_data_out_0 has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/mem_addr_sel has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/rf_addr_Rp_sel has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/rf_addr_Rq_sel has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/rf_addr_Wr_sel has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/mem_rd has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/mem_wr has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/IR_ld has been replicated 1 time(s) to handle iob=true attribute.
+Latch Unit0/PC_inc has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 91
+ Flip-Flops                                            : 91
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : RISC_Processor.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 204
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 7
+#      LUT2                        : 4
+#      LUT3                        : 49
+#      LUT4                        : 4
+#      LUT5                        : 20
+#      LUT6                        : 55
+#      MUXCY                       : 22
+#      MUXF7                       : 16
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 115
+#      FD                          : 3
+#      FDE                         : 80
+#      FDRE                        : 8
+#      LD                          : 24
+# RAMS                             : 28
+#      RAM16X1D                    : 8
+#      RAM256X1S                   : 16
+#      RAM32M                      : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 157
+#      OBUF                        : 157
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              87  out of  18224     0%  
+ Number of Slice LUTs:                  236  out of   9112     2%  
+    Number used as Logic:               140  out of   9112     1%  
+    Number used as Memory:               96  out of   2176     4%  
+       Number used as RAM:               96
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    256
+   Number with an unused Flip Flop:     169  out of    256    66%  
+   Number with an unused LUT:            20  out of    256     7%  
+   Number of fully used LUT-FF pairs:    67  out of    256    26%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                         159
+ Number of bonded IOBs:                 158  out of    232    68%  
+    IOB Flip Flops/Latches:              28
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------+------------------------------+-------+
+Clock Signal                                                               | Clock buffer(FF name)        | Load  |
+---------------------------------------------------------------------------+------------------------------+-------+
+clk                                                                        | BUFGP                        | 119   |
+Unit0/state[2]_GND_13_o_Mux_68_o(Unit0/Mmux_state[2]_GND_13_o_Mux_68_o11:O)| NONE(*)(Unit0/alu_sel_0)     | 6     |
+Unit0/state[2]_GND_11_o_Mux_60_o(Unit0/Mmux_state[2]_GND_11_o_Mux_60_o1:O) | NONE(*)(Unit0/rf_wr_sel_0)   | 2     |
+Unit0/state[2]_GND_10_o_Mux_56_o(Unit0/Mmux_state[2]_GND_10_o_Mux_56_o1:O) | NONE(*)(Unit0/mem_addr_sel)  | 2     |
+Unit0/state[2]_GND_9_o_Mux_52_o(Unit0/state__n0114<7>1:O)                  | NONE(*)(Unit0/mem_wr)        | 2     |
+Unit0/state[2]_GND_8_o_Mux_50_o(Unit0/state__n0114<6>1:O)                  | NONE(*)(Unit0/IR_ld)         | 2     |
+Unit0/state[2]_GND_4_o_Mux_40_o(Unit0/state__n0114<2>1:O)                  | NONE(*)(Unit0/rf_addr_Rq_sel)| 4     |
+Unit0/state[2]_GND_3_o_Mux_38_o(Unit0/state__n0114<1>1:O)                  | NONE(*)(Unit0/PC_inc)        | 2     |
+Unit0/state[2]_GND_6_o_Mux_46_o(Unit0/Mmux_state[2]_GND_6_o_Mux_46_o1:O)   | NONE(*)(Unit0/rf_addr_Wr_sel)| 2     |
+Unit0/state[2]_GND_7_o_Mux_48_o(Unit0/state__n0114<4>1:O)                  | NONE(*)(Unit0/mem_rd)        | 2     |
+---------------------------------------------------------------------------+------------------------------+-------+
+(*) These 9 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.370ns (Maximum Frequency: 228.833MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 8.292ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.370ns (frequency: 228.833MHz)
+  Total number of paths / destination ports: 1625 / 275
+-------------------------------------------------------------------------
+Delay:               4.370ns (Levels of Logic = 8)
+  Source:            Unit6/rf_out_Rp_1 (FF)
+  Destination:       Unit6/Mram_register12 (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Unit6/rf_out_Rp_1 to Unit6/Mram_register12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.525   1.008  Unit6/rf_out_Rp_1 (Unit6/rf_out_Rp_1)
+     LUT3:I2->O            1   0.254   0.000  Unit7/Mmux_alu_res1_rs_lut<1> (Unit7/Mmux_alu_res1_rs_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  Unit7/Mmux_alu_res1_rs_cy<1> (Unit7/Mmux_alu_res1_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<2> (Unit7/Mmux_alu_res1_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<3> (Unit7/Mmux_alu_res1_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<4> (Unit7/Mmux_alu_res1_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<5> (Unit7/Mmux_alu_res1_rs_cy<5>)
+     XORCY:CI->O           2   0.206   0.725  Unit7/Mmux_alu_res1_rs_xor<6> (Unit7/Mmux_alu_res1_split<6>)
+     MUXF7:S->O            3   0.185   0.765  Unit3/Mmux_sel[1]_f[15]_wide_mux_0_OUT<6>11 (rf_in_6_OBUF)
+     RAM32M:DIA0               0.394          Unit6/Mram_register3
+    ----------------------------------------
+    Total                      4.370ns (1.872ns logic, 2.498ns route)
+                                       (42.8% logic, 57.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1209 / 143
+-------------------------------------------------------------------------
+Offset:              7.167ns (Levels of Logic = 18)
+  Source:            Unit6/rf_out_Rp_1 (FF)
+  Destination:       rf_in<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Unit6/rf_out_Rp_1 to rf_in<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.525   1.008  Unit6/rf_out_Rp_1 (Unit6/rf_out_Rp_1)
+     LUT3:I2->O            1   0.254   0.000  Unit7/Mmux_alu_res1_rs_lut<1> (Unit7/Mmux_alu_res1_rs_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  Unit7/Mmux_alu_res1_rs_cy<1> (Unit7/Mmux_alu_res1_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<2> (Unit7/Mmux_alu_res1_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<3> (Unit7/Mmux_alu_res1_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<4> (Unit7/Mmux_alu_res1_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<5> (Unit7/Mmux_alu_res1_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<6> (Unit7/Mmux_alu_res1_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<7> (Unit7/Mmux_alu_res1_rs_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<8> (Unit7/Mmux_alu_res1_rs_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<9> (Unit7/Mmux_alu_res1_rs_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<10> (Unit7/Mmux_alu_res1_rs_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<11> (Unit7/Mmux_alu_res1_rs_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<12> (Unit7/Mmux_alu_res1_rs_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<13> (Unit7/Mmux_alu_res1_rs_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<14> (Unit7/Mmux_alu_res1_rs_cy<14>)
+     XORCY:CI->O           2   0.206   0.726  Unit7/Mmux_alu_res1_rs_xor<15> (Unit7/Mmux_alu_res1_split<15>)
+     LUT5:I4->O            3   0.254   0.765  Unit3/Mmux_sel[1]_f[15]_wide_mux_0_OUT<15>11 (rf_in_15_OBUF)
+     OBUF:I->O                 2.912          rf_in_15_OBUF (rf_in<15>)
+    ----------------------------------------
+    Total                      7.167ns (4.668ns logic, 2.499ns route)
+                                       (65.1% logic, 34.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Unit0/state[2]_GND_13_o_Mux_68_o'
+  Total number of paths / destination ports: 541 / 35
+-------------------------------------------------------------------------
+Offset:              8.292ns (Levels of Logic = 19)
+  Source:            Unit0/alu_sel_0 (LATCH)
+  Destination:       rf_in<15> (PAD)
+  Source Clock:      Unit0/state[2]_GND_13_o_Mux_68_o falling
+
+  Data Path: Unit0/alu_sel_0 to rf_in<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              53   0.581   2.072  Unit0/alu_sel_0 (Unit0/alu_sel_0)
+     LUT3:I0->O            1   0.235   0.000  Unit7/Mmux_alu_res1_rs_lut<0> (Unit7/Mmux_alu_res1_rs_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Unit7/Mmux_alu_res1_rs_cy<0> (Unit7/Mmux_alu_res1_rs_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<1> (Unit7/Mmux_alu_res1_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<2> (Unit7/Mmux_alu_res1_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<3> (Unit7/Mmux_alu_res1_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<4> (Unit7/Mmux_alu_res1_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<5> (Unit7/Mmux_alu_res1_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<6> (Unit7/Mmux_alu_res1_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<7> (Unit7/Mmux_alu_res1_rs_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<8> (Unit7/Mmux_alu_res1_rs_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<9> (Unit7/Mmux_alu_res1_rs_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<10> (Unit7/Mmux_alu_res1_rs_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<11> (Unit7/Mmux_alu_res1_rs_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<12> (Unit7/Mmux_alu_res1_rs_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<13> (Unit7/Mmux_alu_res1_rs_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  Unit7/Mmux_alu_res1_rs_cy<14> (Unit7/Mmux_alu_res1_rs_cy<14>)
+     XORCY:CI->O           2   0.206   0.726  Unit7/Mmux_alu_res1_rs_xor<15> (Unit7/Mmux_alu_res1_split<15>)
+     LUT5:I4->O            3   0.254   0.765  Unit3/Mmux_sel[1]_f[15]_wide_mux_0_OUT<15>11 (rf_in_15_OBUF)
+     OBUF:I->O                 2.912          rf_in_15_OBUF (rf_in<15>)
+    ----------------------------------------
+    Total                      8.292ns (4.729ns logic, 3.563ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Unit0/state[2]_GND_11_o_Mux_60_o'
+  Total number of paths / destination ports: 31 / 17
+-------------------------------------------------------------------------
+Offset:              6.629ns (Levels of Logic = 3)
+  Source:            Unit0/rf_wr_sel_0 (LATCH)
+  Destination:       rf_in<14> (PAD)
+  Source Clock:      Unit0/state[2]_GND_11_o_Mux_60_o falling
+
+  Data Path: Unit0/rf_wr_sel_0 to rf_in<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              30   0.581   1.942  Unit0/rf_wr_sel_0 (Unit0/rf_wr_sel_0)
+     LUT6:I0->O            1   0.254   0.000  Unit3/Mmux_sel[1]_f[15]_wide_mux_0_OUT<1>11_G (N74)
+     MUXF7:I1->O           3   0.175   0.765  Unit3/Mmux_sel[1]_f[15]_wide_mux_0_OUT<1>11 (rf_in_1_OBUF)
+     OBUF:I->O                 2.912          rf_in_1_OBUF (rf_in<1>)
+    ----------------------------------------
+    Total                      6.629ns (3.922ns logic, 2.707ns route)
+                                       (59.2% logic, 40.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Unit0/state[2]_GND_10_o_Mux_56_o'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              6.108ns (Levels of Logic = 2)
+  Source:            Unit0/mem_addr_sel (LATCH)
+  Destination:       mem_addr<7> (PAD)
+  Source Clock:      Unit0/state[2]_GND_10_o_Mux_56_o falling
+
+  Data Path: Unit0/mem_addr_sel to mem_addr<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               8   0.581   1.172  Unit0/mem_addr_sel (Unit0/mem_addr_sel)
+     LUT3:I0->O           17   0.235   1.208  Unit4/Mmux_f81 (mem_addr_7_OBUF)
+     OBUF:I->O                 2.912          mem_addr_7_OBUF (mem_addr<7>)
+    ----------------------------------------
+    Total                      6.108ns (3.728ns logic, 2.380ns route)
+                                       (61.0% logic, 39.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Unit0/state[2]_GND_4_o_Mux_40_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            Unit0/rf_addr_Rp_sel_1 (LATCH)
+  Destination:       rf_Rp_rd (PAD)
+  Source Clock:      Unit0/state[2]_GND_4_o_Mux_40_o falling
+
+  Data Path: Unit0/rf_addr_Rp_sel_1 to rf_Rp_rd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  Unit0/rf_addr_Rp_sel_1 (Unit0/rf_addr_Rp_sel_1)
+     OBUF:I->O                 2.912          rf_Rp_rd_OBUF (rf_Rp_rd)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Unit0/state[2]_GND_6_o_Mux_46_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            Unit0/rf_addr_Wr_sel_1 (LATCH)
+  Destination:       rf_wr (PAD)
+  Source Clock:      Unit0/state[2]_GND_6_o_Mux_46_o falling
+
+  Data Path: Unit0/rf_addr_Wr_sel_1 to rf_wr
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  Unit0/rf_addr_Wr_sel_1 (Unit0/rf_addr_Wr_sel_1)
+     OBUF:I->O                 2.912          rf_wr_OBUF (rf_wr)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Unit0/state[2]_GND_7_o_Mux_48_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            Unit0/mem_rd_1 (LATCH)
+  Destination:       mem_rd (PAD)
+  Source Clock:      Unit0/state[2]_GND_7_o_Mux_48_o falling
+
+  Data Path: Unit0/mem_rd_1 to mem_rd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  Unit0/mem_rd_1 (Unit0/mem_rd_1)
+     OBUF:I->O                 2.912          mem_rd_OBUF (mem_rd)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Unit0/state[2]_GND_9_o_Mux_52_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            Unit0/mem_wr_1 (LATCH)
+  Destination:       mem_wr (PAD)
+  Source Clock:      Unit0/state[2]_GND_9_o_Mux_52_o falling
+
+  Data Path: Unit0/mem_wr_1 to mem_wr
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  Unit0/mem_wr_1 (Unit0/mem_wr_1)
+     OBUF:I->O                 2.912          mem_wr_OBUF (mem_wr)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Unit0/state[2]_GND_8_o_Mux_50_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            Unit0/IR_ld_1 (LATCH)
+  Destination:       IR_ld (PAD)
+  Source Clock:      Unit0/state[2]_GND_8_o_Mux_50_o falling
+
+  Data Path: Unit0/IR_ld_1 to IR_ld
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  Unit0/IR_ld_1 (Unit0/IR_ld_1)
+     OBUF:I->O                 2.912          IR_ld_OBUF (IR_ld)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Unit0/state[2]_GND_3_o_Mux_38_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            Unit0/PC_inc_1 (LATCH)
+  Destination:       PC_inc (PAD)
+  Source Clock:      Unit0/state[2]_GND_3_o_Mux_38_o falling
+
+  Data Path: Unit0/PC_inc_1 to PC_inc
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  Unit0/PC_inc_1 (Unit0/PC_inc_1)
+     OBUF:I->O                 2.912          PC_inc_OBUF (PC_inc)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Unit0/state[2]_GND_10_o_Mux_56_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.218|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Unit0/state[2]_GND_11_o_Mux_60_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.648|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Unit0/state[2]_GND_13_o_Mux_68_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.427|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Unit0/state[2]_GND_3_o_Mux_38_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.322|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Unit0/state[2]_GND_4_o_Mux_40_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.673|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Unit0/state[2]_GND_6_o_Mux_46_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.427|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Unit0/state[2]_GND_7_o_Mux_48_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    3.273|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Unit0/state[2]_GND_8_o_Mux_50_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.427|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Unit0/state[2]_GND_9_o_Mux_52_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.494|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+Unit0/state[2]_GND_10_o_Mux_56_o|         |    3.196|         |         |
+Unit0/state[2]_GND_11_o_Mux_60_o|         |    4.111|         |         |
+Unit0/state[2]_GND_13_o_Mux_68_o|         |    5.653|         |         |
+Unit0/state[2]_GND_3_o_Mux_38_o |         |    1.826|         |         |
+Unit0/state[2]_GND_4_o_Mux_40_o |         |    2.064|         |         |
+Unit0/state[2]_GND_6_o_Mux_46_o |         |    2.195|         |         |
+Unit0/state[2]_GND_7_o_Mux_48_o |         |    2.671|         |         |
+Unit0/state[2]_GND_8_o_Mux_50_o |         |    2.064|         |         |
+Unit0/state[2]_GND_9_o_Mux_52_o |         |    1.762|         |         |
+clk                             |    4.370|         |         |         |
+--------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.45 secs
+ 
+--> 
+
+Total memory usage is 257720 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   70 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

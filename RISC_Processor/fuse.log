@@ -1,0 +1,35 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/RISC_Processor_tb_isim_beh.exe -prj C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/RISC_Processor_tb_beh.prj work.RISC_Processor_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/RF_MUX.v" into library work
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/RF.v" into library work
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/PC.v" into library work
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/IR.v" into library work
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/D_MEMORY.v" into library work
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/D_ADDR_MUX.v" into library work
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/controller.v" into library work
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/alu_16bit.v" into library work
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/RISC_Processor.v" into library work
+Analyzing Verilog file "C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/RISC_Processor_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module controller
+Compiling module PC
+Compiling module IR
+Compiling module RF_MUX
+Compiling module D_ADDR_MUX
+Compiling module D_MEMORY
+Compiling module RF
+Compiling module alu_16bit
+Compiling module RISC_Processor
+Compiling module RISC_Processor_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 11 Verilog Units
+Built simulation executable C:/Users/Patrick/Desktop/Xilinx/RISC_Processor/RISC_Processor_tb_isim_beh.exe
+Fuse Memory Usage: 28980 KB
+Fuse CPU Usage: 420 ms
